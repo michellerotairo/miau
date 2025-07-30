@@ -1,0 +1,227 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  background: linear-gradient(120deg, #0f2239 0%, #33678a 100%);
+  color: #e7e7e7;
+  overflow: hidden;
+}
+
+.card-container {
+  perspective: 1000px;
+  position: relative;
+  margin: 20px;
+}
+
+.card {
+  background: rgba(20, 31, 47, 0.98);
+  border-radius: 18px;
+  padding: 48px 36px 40px 36px;
+  box-shadow: 0 10px 36px rgba(24, 32, 60, 0.27);
+  text-align: center;
+  max-width: 540px;
+  margin: 20px auto; /* Added vertical margin */
+  border: 2.5px solid #f5e09a;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(.38,1.01,.77,.99);
+}
+
+#second {
+    font-size: larger;
+}
+
+.card h3 {
+  font-size: 2.4em;
+  margin-bottom: 18px;
+  color: #e7c468; /* Brass/Gold */
+  letter-spacing: 0.03em;
+  text-shadow: 0 1.5px 0 #203451, 2px 2px 6px #1e2329;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card p {
+  font-size: 1.18em;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #b3b6bc;
+}
+
+/* Flex container for buttons with gap */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping on narrow screens */
+}
+
+/* Uniform button widths, flexible growth */
+.buttons button {
+  background: #1686d6;
+  color: #fffde2;
+  border: none;
+  padding: 10px 20px;        /* Adjust padding as needed */
+  margin: 0 8px;
+  border-radius: 12px;       /* Keep rounded corners */
+  font-size: 1.1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4.5px 18px rgba(35, 55, 70, 0.25);
+  transition: background 0.22s, transform 0.16s, box-shadow 0.17s;
+  text-align: center;        /* Center text horizontally */
+  display: flex;             /* Use flexbox to center vertically and horizontally */
+  flex-direction: column;    /* Stack main text and subtitle vertically */
+  align-items: center;       /* Central horizontal alignment */
+  justify-content: center;   /* Central vertical alignment */
+  white-space: normal;       /* Allow wrapping */
+  height: auto;              /* Ensure height fits content */
+  min-height: 60px;          /* Optional min height for better button sizing */
+  box-sizing: border-box;    /* Include padding in size */
+}
+
+#deny {
+    background: #d9534f; /* Bootstrap red shade */
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 8px 20px; /* smaller size */
+    font-size: 0.9em;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(217, 83, 79, 0.6);
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    user-select: none;
+}
+
+#grant {
+    background: #5cb85c; /* Bootstrap green shade */
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 8px 20px; /* smaller size */
+    font-size: 0.9em;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(92, 184, 92, 0.6);
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    user-select: none;
+}
+
+.buttons button:hover {
+  background: #19314c;
+  transform: translateY(-2.5px) scale(1.035);
+  box-shadow: 0 8px 25px rgba(38, 65, 80, 0.25);
+}
+
+/* Lighter subtitle styling */
+button .subtitle {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #d2d8e2;
+  margin-top: 4px;           /* spacing below main text */
+  line-height: 1.1;
+  font-style: italic;
+  text-align: center;        /* center subtitle text */
+}
+
+
+/* Subtitle color change on hover */
+.buttons button:hover .subtitle {
+  color: #bac1ce;
+}
+
+/* Nautical Icon (anchor) above the card */
+.card:before {
+  content: "⚓️";
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.3em;
+  color: #e7c468;
+  text-shadow: 0 5px 16px #23405e44;
+  opacity: 0.65;
+}
+
+/* Subtle wave pattern at bottom */
+body::after {
+  content: "";
+  position: fixed;
+  left: 0; right: 0; bottom: 0; height: 160px;
+  background: repeating-linear-gradient(
+      120deg, 
+      #254565, #254565 40px, 
+      #18325a 45px, 
+      #254565 50px
+   );
+  opacity: 0.11;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+#dockingComplete {
+  background-color: #28a745; /* Bootstrap green shade */
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 8px 20px; /* smaller size */
+  font-size: 0.9em;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.6);
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  user-select: none;
+  min-width: 140px;
+}
+
+#dockingComplete:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* Responsive: stack buttons on small screens */
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buttons button {
+    max-width: 100%;
+    min-width: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-8px); }
+  30% { transform: translateX(8px); }
+  45% { transform: translateX(-8px); }
+  60% { transform: translateX(8px); }
+  75% { transform: translateX(-4px); }
+  90% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+
+
