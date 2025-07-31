@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array of 9 picture URLs
     const pictures = [
-        'second_page_image/memo/memo1.jpeg',
-        'second_page_image/memo/memo2.jpeg',
-        'second_page_image/memo/memo3.jpeg',
-        'second_page_image/memo/memo4.jpeg',
-        'second_page_image/memo/memo5.jpeg',
-        'second_page_image/memo/memo6.jpeg',
-        'second_page_image/memo/memo7.jpeg',
-        'second_page_image/memo/memo8.jpeg',
-        'second_page_image/memo/memo9.jpeg'
+        'memo1.jpeg',
+        'memo2.jpeg',
+        'memo3.jpeg',
+        'memo4.jpeg',
+        'memo5.jpeg',
+        'memo6.jpeg',
+        'memo7.jpeg',
+        'memo8.jpeg',
+        'memo9.jpeg'
     ];
 
     cargo1Button.addEventListener('click', () => {
