@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array of 9 picture URLs
     const pictures = [
-        'second_page_image/place/place1.jpeg',
-        'second_page_image/place/place2.jpeg',
-        'second_page_image/place/place3.jpeg'
+        'place1.jpeg',
+        'place2.jpeg',
+        'place3.jpeg'
     ];
 
     cargo1Button.addEventListener('click', () => {
